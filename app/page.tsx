@@ -456,7 +456,7 @@ export default function Home() {
             <p>
               Не нашли ответ? Напишите координатору — вам помогут сориентироваться.
             </p>
-            <a className="inline-link" href="mailto:inbox@mystic-school.ru">
+            <a className="inline-link" href="mailto:innaksanti@mail.ru">
               Задать вопрос <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -487,7 +487,7 @@ export default function Home() {
             <a className="button button-light" href="tel:+79175371882">
               +7 (917) 537-18-82 <span aria-hidden="true">↗</span>
             </a>
-            <a className="contact-mail" href="mailto:inbox@mystic-school.ru">
+            <a className="contact-mail" href="mailto:innaksanti@mail.ru">
               inbox@mystic-school.ru
             </a>
           </div>
