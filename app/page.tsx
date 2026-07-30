@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const concerns = [
   {
@@ -79,6 +79,84 @@ const testimonials = [
   },
 ];
 
+const books = [
+  "Книга о духовной Работе",
+  "Книга об очевидном и неочевидном",
+  "Тёмная сторона поиска. Ключи к осознанности",
+  "Наука духовного роста",
+  "Путь преображения. Секс и духовный рост",
+  "Путь преображения: мистический опыт",
+  "За завесами Света",
+  "Что-нибудь для Бога",
+  "Основы мистического Пути",
+  "Как укротить эмоции",
+  "В присутствии Бога",
+  "Мистическая работа со снами",
+  "Великие мистики, как они есть",
+  "Практика осознанности",
+  "Огонь стремления",
+  "Истинные чудеса",
+  "Трансформация ума",
+  "Круги на воде",
+  "Суфийские притчи",
+  "Великое Дао",
+  "Становление мистика",
+  "Книга о Просветлении",
+];
+
+const certifiedSpecialists = [
+  { name: "Богачёва Ирина Николаевна", certificate: "001" },
+  { name: "Борщ Николай Витальевич", certificate: "002" },
+  { name: "Климков Дмитрий Вячеславович", certificate: "003" },
+  { name: "Васильева Татьяна Владимировна", certificate: "004" },
+  { name: "Бурлаков Сергей Владимирович", certificate: "005" },
+  { name: "Иванов Николай Всеволодович", certificate: "007" },
+  { name: "Накропина Надежда Владимировна", certificate: "008" },
+  { name: "Баранова Марина Валентиновна", certificate: "009" },
+  { name: "Гуринович Светлана Александровна", certificate: "010" },
+  { name: "Суриков Дмитрий Олегович", certificate: "011" },
+  { name: "Загольская Надежда Николаевна", certificate: "012" },
+  { name: "Иванова Елена Юрьевна", certificate: "013" },
+  { name: "Цветнова Ксения Александровна", certificate: "014" },
+  { name: "Олиференко Полина Владимировна", certificate: "015" },
+  { name: "Умяров Рашид Мансурович", certificate: "024" },
+  { name: "Дибиргаджиев Олег Магомедович", certificate: "025" },
+  { name: "Шония Владимир Вячеславович", certificate: "026" },
+  { name: "Навалов Вячеслав Юрьевич", certificate: "027" },
+  { name: "Бареа-Нуньес Евгения Сергеевна", certificate: "028" },
+  { name: "Ефимова Ирина Анатольевна", certificate: "029" },
+  { name: "Зимовец Эльмира Менеровна", certificate: "030" },
+  { name: "Смолянинова Мария Александровна", certificate: "031" },
+  { name: "Афанасенко Инна Владимировна", certificate: "032" },
+  { name: "Бутов Павел Сергеевич", certificate: "033" },
+  { name: "Бавыкина Елена Владимировна", certificate: "034" },
+  { name: "Толстиков Олег Владимирович", certificate: "035" },
+  { name: "Новак Александр Александрович", certificate: "036" },
+  { name: "Клевцов Дмитрий Юрьевич", certificate: "037" },
+  { name: "Гавердов Константин Константинович", certificate: "038" },
+  { name: "Эрик Фриц", certificate: "039" },
+  { name: "Чиркова Инна Владимировна", certificate: "041" },
+  { name: "Рожкова Анна Александровна", certificate: "042" },
+  { name: "Вахненко Виталий Алексеевич", certificate: "045" },
+  { name: "Максимов Вадим Юрьевич", certificate: "047" },
+  { name: "Муравлев Дмитрий Борисович", certificate: "048" },
+  { name: "Карабаджак Игорь Анатольевич", certificate: "049" },
+  { name: "Конюшенко Елена Карловна", certificate: "052" },
+  { name: "Скляр Яна Викторовна", certificate: "053" },
+  { name: "Койфман Ольга Васильевна", certificate: "054" },
+  { name: "Вознесенская Ирина Викторовна (СПб)", certificate: "055" },
+  { name: "Шевченко Татьяна Владимировна (СПб)", certificate: "056" },
+  { name: "Сафиуллин Рафаэль Рафаэльевич", certificate: "057" },
+  { name: "Добржанская Евгения Александровна", certificate: "058" },
+  { name: "Шпиньков Вячеслав Игоревич", certificate: "059" },
+  { name: "Певченко Юрий Владимирович", certificate: "060" },
+  { name: "Страхова Елена Викторовна", certificate: "061" },
+  { name: "Азарова Елена Валентиновна", certificate: "062" },
+  { name: "Бакаева Ирина Владимировна", certificate: "063" },
+  { name: "Лариса Ивановна Робинс", certificate: "064" },
+  { name: "Гусь Дарья Игоревна (СПб)", certificate: "065" },
+];
+
 const specialists = [
   { city: "Москва", name: "Елена Страхова", phone: "+7 926 521-65-65", place: "метро Пыхтино" },
   { city: "Москва", name: "Юрий Певченко", phone: "+7 925 771-54-78", place: "Пыхтино / Мытищи" },
@@ -124,6 +202,8 @@ export default function Home() {
   const [testimonial, setTestimonial] = useState(0);
   const [city, setCity] = useState("Все города");
   const [headerRaised, setHeaderRaised] = useState(false);
+  const booksRail = useRef<HTMLDivElement>(null);
+  const registryDialog = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     const onScroll = () => setHeaderRaised(window.scrollY > 16);
@@ -137,6 +217,11 @@ export default function Home() {
     city === "Все города" ? specialists : specialists.filter((item) => item.city === city);
 
   const closeMenu = () => setMenuOpen(false);
+  const scrollBooks = (direction: -1 | 1) => {
+    const rail = booksRail.current;
+    if (!rail) return;
+    rail.scrollBy({ left: direction * rail.clientWidth * 0.78, behavior: "smooth" });
+  };
 
   return (
     <main>
@@ -246,6 +331,59 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="shell books-showcase" id="books">
+          <div className="books-heading">
+            <div>
+              <p className="eyebrow">Книги автора</p>
+              <h3>Мысли, наблюдения<br />и практический опыт</h3>
+            </div>
+            <div className="books-intro">
+              <p>
+                Книги Руслана Жуковца о психологии, осознанности,
+                духовном поиске и внутренней работе.
+              </p>
+              <a
+                className="inline-link"
+                href="https://mystic-school.ru/knigi"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Все книги и материалы <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <div className="books-rail-wrap">
+            <div className="books-rail" ref={booksRail}>
+              {books.map((title, index) => (
+                <a
+                  className="book-card"
+                  href="https://mystic-school.ru/knigi"
+                  target="_blank"
+                  rel="noreferrer"
+                  key={title}
+                >
+                  <span className="book-number">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="book-cover-wrap">
+                    <img
+                      className="book-cover"
+                      src={`books/book-${String(index + 1).padStart(2, "0")}.webp`}
+                      alt={`Обложка книги «${title}»`}
+                      loading="lazy"
+                    />
+                  </span>
+                  <strong>{title}</strong>
+                  <span className="book-more">О книге <i aria-hidden="true">↗</i></span>
+                </a>
+              ))}
+            </div>
+            <div className="books-controls" aria-label="Прокрутка книг">
+              <button type="button" onClick={() => scrollBooks(-1)} aria-label="Предыдущие книги">←</button>
+              <span>Листайте коллекцию</span>
+              <button type="button" onClick={() => scrollBooks(1)} aria-label="Следующие книги">→</button>
+            </div>
+          </div>
+        </div>
+
         <div className="shell principle-panel">
           <div className="principle-visual" aria-hidden="true">
             <div className="orb orb-one" />
@@ -339,8 +477,13 @@ export default function Home() {
 
       <section className="section author-section">
         <div className="shell author-grid">
-          <div className="author-portrait" aria-hidden="true">
-            <span className="author-monogram">РЖ</span>
+          <div className="author-portrait">
+            <img
+              className="author-photo"
+              src="ruslan-zhukovets.webp"
+              alt="Руслан Жуковец"
+              loading="lazy"
+            />
             <span className="author-caption">Автор метода</span>
           </div>
           <div className="author-copy">
@@ -414,6 +557,26 @@ export default function Home() {
             </p>
           </div>
 
+          <div className="registry-banner">
+            <div className="registry-badge" aria-hidden="true">
+              <span>50</span>
+              <small>специалистов</small>
+            </div>
+            <div>
+              <span className="registry-kicker">Авторский курс</span>
+              <h3>Специалисты, прошедшие обучение по методу</h3>
+              <p>
+                Откройте полный реестр имён и номеров выданных сертификатов.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => registryDialog.current?.showModal()}
+            >
+              Сертифицированные специалисты <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+
           <div className="city-tabs" role="group" aria-label="Фильтр по городу">
             {cities.map((item) => (
               <button
@@ -447,6 +610,55 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <dialog
+        className="registry-dialog"
+        ref={registryDialog}
+        aria-labelledby="registry-title"
+        onClick={(event) => {
+          if (event.target === event.currentTarget) event.currentTarget.close();
+        }}
+      >
+        <div className="registry-modal">
+          <div className="registry-modal-head">
+            <div>
+              <p className="eyebrow">Официальный реестр</p>
+              <h2 id="registry-title">Сертифицированные специалисты</h2>
+              <p>
+                Специалисты, прошедшие авторский курс обучения
+                по телесно-ориентированной терапии.
+              </p>
+            </div>
+            <button
+              className="registry-close"
+              type="button"
+              onClick={() => registryDialog.current?.close()}
+              aria-label="Закрыть список"
+            >
+              ×
+            </button>
+          </div>
+          <div className="registry-list">
+            {certifiedSpecialists.map((specialist, index) => (
+              <div className="registry-person" key={specialist.certificate}>
+                <span className="registry-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <strong>{specialist.name}</strong>
+                <span className="certificate-number">
+                  сертификат {specialist.certificate}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="registry-modal-foot">
+            <span>Всего в реестре: {certifiedSpecialists.length}</span>
+            <button type="button" onClick={() => registryDialog.current?.close()}>
+              Закрыть
+            </button>
+          </div>
+        </div>
+      </dialog>
 
       <section className="section faq-section" id="faq">
         <div className="shell faq-grid">
