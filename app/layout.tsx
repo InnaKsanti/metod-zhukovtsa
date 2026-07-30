@@ -15,8 +15,8 @@ export async function generateMetadata(): Promise<Metadata> {
     description:
       "Авторский метод работы с глубокими мышечными напряжениями. О методе, ходе сеанса и сертифицированных специалистах.",
     icons: {
-      icon: "/favicon.svg",
-      shortcut: "/favicon.svg",
+      icon: "/method-emblem.png",
+      shortcut: "/method-emblem.png",
     },
     openGraph: {
       title: "Метод Жуковца — свобода через тело",
