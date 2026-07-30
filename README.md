@@ -18,4 +18,13 @@ npm run dev
 npm run build
 ```
 
+Статическая сборка для GitHub Pages:
+
+```bash
+npm run pages:build
+```
+
+Публикация выполняется автоматически из ветки `main`. Адрес сайта:
+https://innaksanti.github.io/metod-zhukovtsa/
+
 Основные файлы интерфейса находятся в папке `app`, изображения — в `public`.
