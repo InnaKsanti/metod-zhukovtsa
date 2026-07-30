@@ -80,28 +80,116 @@ const testimonials = [
 ];
 
 const books = [
-  "Книга о духовной Работе",
-  "Книга об очевидном и неочевидном",
-  "Тёмная сторона поиска. Ключи к осознанности",
-  "Наука духовного роста",
-  "Путь преображения. Секс и духовный рост",
-  "Путь преображения: мистический опыт",
-  "За завесами Света",
-  "Что-нибудь для Бога",
-  "Основы мистического Пути",
-  "Как укротить эмоции",
-  "В присутствии Бога",
-  "Мистическая работа со снами",
-  "Великие мистики, как они есть",
-  "Практика осознанности",
-  "Огонь стремления",
-  "Истинные чудеса",
-  "Трансформация ума",
-  "Круги на воде",
-  "Суфийские притчи",
-  "Великое Дао",
-  "Становление мистика",
-  "Книга о Просветлении",
+  {
+    title: "Книга о духовной Работе",
+    annotation:
+      "Практическое руководство для искателей Истины. В главах разного уровня автор соединяет прямые указания и размышления о внутренней работе, предлагая относиться к чтению как к самостоятельной духовной практике.",
+  },
+  {
+    title: "Книга об очевидном и неочевидном",
+    annotation:
+      "Книга о привычных состояниях и скрытых механизмах, которые мешают человеку меняться. Автор помогает внимательнее увидеть себя, свои реакции и возможности внутреннего преобразования.",
+  },
+  {
+    title: "Тёмная сторона поиска. Ключи к осознанности",
+    annotation:
+      "Разбор ошибок, возникающих в духовном поиске, когда цель остаётся неясной или подменяется ожиданиями. Вторая часть посвящена практическим основам осознанности и самостоятельной внутренней работе.",
+  },
+  {
+    title: "Наука духовного роста",
+    annotation:
+      "О страхе, желаниях, страдании и отказе от навязанных идеалов. Книга показывает, как использовать повседневные ситуации для самоисследования и постепенно двигаться по пути познания себя.",
+  },
+  {
+    title: "Путь преображения. Секс и духовный рост",
+    annotation:
+      "Первая часть знакомит с принципами осознанности и психологией духовного поиска. Вторая рассматривает сексуальное влечение, желания и энергию как материал для осознанной внутренней работы.",
+  },
+  {
+    title: "Путь преображения: мистический опыт",
+    annotation:
+      "Продолжение разговора о преображении человека через личный опыт и практику. Автор описывает этапы Пути, внутренние перемены и трудности, с которыми сталкивается искатель.",
+  },
+  {
+    title: "За завесами Света",
+    annotation:
+      "Современное изложение теории и практики эзотерического суфизма, основанное на собственном мистическом опыте автора. Особое внимание уделено условиям выполнения практик и состояниям современного искателя.",
+  },
+  {
+    title: "Что-нибудь для Бога",
+    annotation:
+      "Ироничные философские рассказы и притчи, выросшие из реальных житейских ситуаций. За юмором раскрываются вопросы предназначения, смысла бытия и отношений человека с Богом.",
+  },
+  {
+    title: "Основы мистического Пути",
+    annotation:
+      "Системное описание законов духовной работы и современного мистического Пути. Простым языком автор говорит о Потоках Творения, взаимодействии с Высшим и внутренних условиях продвижения.",
+  },
+  {
+    title: "Как укротить эмоции",
+    annotation:
+      "Практическая книга психотерапевта о том, как эмоции переживаются телом и что происходит, когда они остаются подавленными. Читатель знакомится с отдельными эмоциями и способами осознанной работы с ними.",
+  },
+  {
+    title: "В присутствии Бога",
+    annotation:
+      "Размышления о самопознании и мистическом Пути в современном суфийском учении. Автор говорит о жизни и смерти, уровнях восприятия Высшего и о том, как не остановиться в выбранной внутренней работе.",
+  },
+  {
+    title: "Мистическая работа со снами",
+    annotation:
+      "Книга о сновидениях как пространстве самопознания и духовной практики. Рассматриваются способы наблюдения, запоминания и осмысленной работы со снами без отрыва от повседневной жизни.",
+  },
+  {
+    title: "Великие мистики, как они есть",
+    annotation:
+      "Исследование жизни, посланий и Работы известных мистиков без идеализации и очернения. Автор сопоставляет учения и биографии, чтобы показать их место во времени и практическое значение для искателей.",
+  },
+  {
+    title: "Практика осознанности",
+    annotation:
+      "Книга, созданная на основе лекций автора, охватывает наблюдение эмоций, мыслей и желаний. Она показывает, как развивать присутствие в текущем моменте и применять осознанность в обычной жизни и духовной работе.",
+  },
+  {
+    title: "Огонь стремления",
+    annotation:
+      "О суфийской Работе, стремлении к Истине и внутренних препятствиях на Пути. Автор объясняет, как формируется намерение, почему искатели приходят и уходят и какую роль играет созерцание.",
+  },
+  {
+    title: "Истинные чудеса",
+    annotation:
+      "Новый взгляд на развитие человека, причины страдания и взаимодействие с Высшим. Автор переосмысливает распространённые представления о духовном росте и раскрывает более глубокие уровни внутреннего мира.",
+  },
+  {
+    title: "Трансформация ума",
+    annotation:
+      "Книга о преодолении привычных ограничений мышления и восприятия. В центре внимания — наблюдение за умом, распознавание автоматических реакций и условия настоящего внутреннего изменения.",
+  },
+  {
+    title: "Круги на воде",
+    annotation:
+      "Сборник размышлений об опыте и знании на суфийском Пути. Автор прослеживает, как внутренние события отражаются во внешней жизни и как личная практика постепенно меняет восприятие мира.",
+  },
+  {
+    title: "Суфийские притчи",
+    annotation:
+      "Известные суфийские истории с комментариями современного мастера. Через притчи раскрываются психология человека, этапы Пути, условия успешной практики и способы развития тонкого восприятия.",
+  },
+  {
+    title: "Великое Дао",
+    annotation:
+      "Построчный мистический комментарий к «Дао Дэ Цзин», основанный на личном опыте следования Пути. Книга исследует Дао, недеяние, гармонию и практический смысл древнего текста для современного человека.",
+  },
+  {
+    title: "Становление мистика",
+    annotation:
+      "Рассказ о внутреннем становлении, выборе Пути и принятии ответственности за собственную Работу. Автор показывает, как опыт, практика и взаимодействие с Высшим постепенно меняют искателя.",
+  },
+  {
+    title: "Книга о Просветлении",
+    annotation:
+      "О различных измерениях реальности, выборе Пути и начале взаимодействия с Господом. Автор рассматривает ловушки мистического поиска, качества искателя и практики, приближающие к познанию Истины.",
+  },
 ];
 
 const certifiedSpecialists = [
@@ -204,6 +292,8 @@ export default function Home() {
   const [headerRaised, setHeaderRaised] = useState(false);
   const booksRail = useRef<HTMLDivElement>(null);
   const registryDialog = useRef<HTMLDialogElement>(null);
+  const bookDialog = useRef<HTMLDialogElement>(null);
+  const [selectedBook, setSelectedBook] = useState<number | null>(null);
 
   useEffect(() => {
     const onScroll = () => setHeaderRaised(window.scrollY > 16);
@@ -222,13 +312,17 @@ export default function Home() {
     if (!rail) return;
     rail.scrollBy({ left: direction * rail.clientWidth * 0.78, behavior: "smooth" });
   };
+  const openBook = (index: number) => {
+    setSelectedBook(index);
+    requestAnimationFrame(() => bookDialog.current?.showModal());
+  };
 
   return (
     <main>
       <header className={`site-header ${headerRaised ? "is-raised" : ""}`}>
         <a className="brand" href="#top" onClick={closeMenu} aria-label="Метод Жуковца — наверх">
           <span className="brand-mark" aria-hidden="true">
-            Ж
+            <img className="brand-emblem" src="method-emblem.png" alt="" />
           </span>
           <span>
             <strong>Метод Жуковца</strong>
@@ -354,26 +448,26 @@ export default function Home() {
           </div>
           <div className="books-rail-wrap">
             <div className="books-rail" ref={booksRail}>
-              {books.map((title, index) => (
-                <a
+              {books.map((book, index) => (
+                <button
                   className="book-card"
-                  href="https://mystic-school.ru/knigi"
-                  target="_blank"
-                  rel="noreferrer"
-                  key={title}
+                  type="button"
+                  onClick={() => openBook(index)}
+                  key={book.title}
+                  aria-label={`Открыть информацию о книге «${book.title}»`}
                 >
                   <span className="book-number">{String(index + 1).padStart(2, "0")}</span>
                   <span className="book-cover-wrap">
                     <img
                       className="book-cover"
-                      src={`books/book-${String(index + 1).padStart(2, "0")}.webp`}
-                      alt={`Обложка книги «${title}»`}
+                      src={`books/book-${String(index + 1).padStart(2, "0")}.jpg`}
+                      alt={`Обложка книги «${book.title}»`}
                       loading="lazy"
                     />
                   </span>
-                  <strong>{title}</strong>
-                  <span className="book-more">О книге <i aria-hidden="true">↗</i></span>
-                </a>
+                  <strong>{book.title}</strong>
+                  <span className="book-more">О книге <i aria-hidden="true">＋</i></span>
+                </button>
               ))}
             </div>
             <div className="books-controls" aria-label="Прокрутка книг">
@@ -388,10 +482,7 @@ export default function Home() {
           <div className="principle-visual" aria-hidden="true">
             <div className="orb orb-one" />
             <div className="orb orb-two" />
-            <div className="body-line" />
-            <span className="pulse pulse-one" />
-            <span className="pulse pulse-two" />
-            <span className="pulse pulse-three" />
+            <img className="principle-emblem" src="method-emblem.png" alt="" />
           </div>
           <div className="principle-copy">
             <span className="panel-index">01 / ПРИНЦИП</span>
@@ -409,6 +500,46 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <dialog
+        className="book-dialog"
+        ref={bookDialog}
+        aria-labelledby="book-dialog-title"
+        onClose={() => setSelectedBook(null)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) event.currentTarget.close();
+        }}
+      >
+        {selectedBook !== null && (
+          <article className="book-modal">
+            <button
+              className="registry-close book-modal-close"
+              type="button"
+              onClick={() => bookDialog.current?.close()}
+              aria-label="Закрыть информацию о книге"
+            >
+              ×
+            </button>
+            <div className="book-modal-cover">
+              <img
+                src={`books/book-${String(selectedBook + 1).padStart(2, "0")}.jpg`}
+                alt={`Обложка книги «${books[selectedBook].title}»`}
+              />
+            </div>
+            <div className="book-modal-copy">
+              <p className="eyebrow">Руслан Жуковец · книга {String(selectedBook + 1).padStart(2, "0")}</p>
+              <h2 id="book-dialog-title">{books[selectedBook].title}</h2>
+              <p className="book-annotation">{books[selectedBook].annotation}</p>
+              <p className="book-source-note">
+                Краткая аннотация подготовлена по описанию издания.
+              </p>
+              <button className="button button-primary" type="button" onClick={() => bookDialog.current?.close()}>
+                Вернуться к книгам
+              </button>
+            </div>
+          </article>
+        )}
+      </dialog>
 
       <section className="section concerns-section" id="help">
         <div className="shell">
@@ -475,7 +606,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section author-section">
+      <section className="section author-section" id="author">
         <div className="shell author-grid">
           <div className="author-portrait">
             <img
@@ -710,7 +841,9 @@ export default function Home() {
       <footer>
         <div className="shell footer-grid">
           <a className="brand footer-brand" href="#top">
-            <span className="brand-mark" aria-hidden="true">Ж</span>
+            <span className="brand-mark" aria-hidden="true">
+              <img className="brand-emblem" src="method-emblem.png" alt="" />
+            </span>
             <span>
               <strong>Метод Жуковца</strong>
               <small>Телесно-ориентированная терапия</small>
