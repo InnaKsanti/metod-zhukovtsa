@@ -175,7 +175,7 @@ export default function Home() {
       <section className="hero" id="top">
         <img
           className="hero-image"
-          src="/hero-method.webp"
+          src="hero-method.webp"
           alt="Светлое пространство для телесно-ориентированной терапии"
           fetchPriority="high"
         />
