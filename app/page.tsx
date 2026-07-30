@@ -488,7 +488,7 @@ export default function Home() {
               +7 (917) 537-18-82 <span aria-hidden="true">↗</span>
             </a>
             <a className="contact-mail" href="mailto:innaksanti@mail.ru">
-              inbox@mystic-school.ru
+              innaksanti@mail.ru
             </a>
           </div>
           <span className="contact-person">Инна · координатор обучения</span>
