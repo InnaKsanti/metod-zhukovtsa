@@ -302,6 +302,13 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnScroll = () => setMenuOpen(false);
+    window.addEventListener("scroll", closeOnScroll, { passive: true, once: true });
+    return () => window.removeEventListener("scroll", closeOnScroll);
+  }, [menuOpen]);
+
   const cities = ["Все города", ...Array.from(new Set(specialists.map((item) => item.city)))];
   const visibleSpecialists =
     city === "Все города" ? specialists : specialists.filter((item) => item.city === city);
